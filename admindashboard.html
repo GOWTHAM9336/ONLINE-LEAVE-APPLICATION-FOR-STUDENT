@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMG College Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style200.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+       <b> <h2>K.M.G</h2></b>
+        <ul>
+            <li><button onclick="showSection('dashboard')"><i class="fa fa-tachometer-alt"></i> Dashboard</button></li>
+            <li>
+                <a href="qadmin_dashboard.php">
+                    <button onclick="showStudents()"><i class="fa fa-users"></i>Student Details</button>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost/phpmyadmin/">
+                    <button onclick="showStudents()"><i class="fa fa-users"></i> Students Leave Details in database</button>
+                </a>
+            </li>
+            
+            <li><button onclick="showFaculty()"><i class="fa fa-chalkboard-teacher"></i> Faculty</button></li>
+            <li><button onclick="showCourses()"><i class="fa fa-book"></i> Courses</button></li>
+            <li><button onclick="showReports()"><i class="fa fa-file-alt"></i> Reports</button></li>
+            <li><button onclick="showSection('settings')"><i class="fa fa-cogs"></i> Settings</button></li>
+        
+            <li>
+                <button onclick="logoutUser()">
+                    <i class="fa fa-sign-out-alt"></i> Logout
+                </button>
+            </li>
+
+            
+           
+            
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="navbar">
+            <span><center><b>KMG College of Arts and Science (Autonomous)</b></center></span>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="section dashboard active">
+            <div class="card"><h3>Total Students</h3><p>2,345</p></div>
+            <div class="card"><h3>Total Faculty</h3><p>150</p></div>
+            <div class="card"><h3>Available Courses</h3><p>25</p></div>
+            <div class="card"><h3>Latest Notices</h3><p>Exam schedule updated</p></div>
+        </div>
+
+        <!-- Students Leave Details -->
+        <div class="section students" id="students">
+            <h2>Students Leave Details</h2>
+            <p>Fetching student leave records...</p>
+        </div>
+
+        <!-- Faculty -->
+        <div class="section faculty">
+            <h2>Faculty</h2>
+            <p>Faculty information will be updated soon.</p>
+        </div>
+
+        
+    <!-- Courses -->
+<div class="section courses">
+    <ol type="1">
+    <h2>Courses</h2>
+    <div class="course-list">
+        <h3>UG Courses</h3>
+        <ul id="ug-courses">
+            <li>B.A., English</li>
+            <li>Bachelor of Business Administration</li>
+            <li>Bachelor of Computer Applications</li>
+            <li>B.Com</li>
+            <li>B.Com., Computer Applications</li>
+            <li>B.Sc., Microbiology</li>
+            <li>B.Sc., Biochemistry</li>
+            <li>B.Sc., Computer Science</li>
+            <li>B.Sc., Chemistry</li>
+            <li>B.Sc., Mathematics</li>
+            <li>B.Sc., Artificial Intelligence</li>
+            <li>B.Sc., Data Science</li>
+        </ul>
+
+        <h3>PG Courses</h3>
+        <ul id="pg-courses">
+            <li>M.Sc., Information Technology</li>
+            <li>M.Sc., Mathematics</li>
+            <li>M.A., English</li>
+            <li>M.Com</li>
+            <li>M.Com., Computer Applications</li>
+            <li>M.Sc., Applied Microbiology</li>
+            <li>M.Sc., Chemistry</li>
+            <li>M.Sc., Biochemistry</li>
+        </ul>
+
+        <h3>M.Phil Programme</h3>
+        <ul id="mphil-courses">
+            <li>M.Phil., Biochemistry</li>
+            <li>M.Phil., Computer Science</li>
+            <li>M.Phil., Chemistry</li>
+            <li>M.Phil., Commerce</li>
+            <li>M.Phil., Mathematics</li>
+        </ul>
+
+        <h3>Ph.D Programme</h3>
+        <ul id="phd-courses">
+            <li>Ph.D Commerce FT</li>
+            <li>Ph.D Chemistry FT</li>
+            <li>Ph.D Chemistry PT</li>
+            <li>Ph.D Commerce PT</li>
+            <li>Ph.D Biochemistry PT</li>
+            <li>Ph.D Microbiology PT</li>
+            <li>Ph.D Biochemistry FT</li>
+            <li>Ph.D Microbiology FT</li>
+        </ul>
+    </ol>
+    </div>
+</div>
+
+
+        <!-- Reports -->
+        <div class="section reports">
+            <h2>Reports</h2>
+            <p>Click the button to generate a new report.</p>
+            <button onclick="generateReport()">Generate Report</button>
+        </div>
+
+        <!-- Settings -->
+        <div class="section settings">
+            <h2>Settings</h2>
+
+            <div class="card">
+                <h3>Change Password</h3>
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password">
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password">
+                <button onclick="alert('Password Changed Successfully')">Update Password</button>
+            </div>
+
+            <div class="card">
+                <h3>Manage Users</h3>
+                <p>Admin can add, edit, or remove users.</p>
+                <button onclick="alert('User Management Opened')">Manage Users</button>
+            </div>
+
+            <div class="card">
+                <h3>Notification Settings</h3>
+                <label><input type="checkbox" checked> Email Notifications</label>
+                <label><input type="checkbox"> SMS Alerts</label>
+                <button onclick="alert('Notification Settings Updated')">Save Changes</button>
+            </div>
+
+            <div class="card">
+                <h3>Theme Preferences</h3>
+                <button onclick="document.body.style.backgroundColor='#fff';">Light Mode</button>
+                <button onclick="document.body.style.backgroundColor='#222'; document.body.style.color='#fff';">Dark Mode</button>
+            </div>
+
+            <div class="card">
+                <h3>Backup & Restore</h3>
+                <button onclick="alert('Backup Created')">Create Backup</button>
+                <button onclick="alert('Restore Started')">Restore Data</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.section').forEach(div => div.classList.remove('active'));
+            document.querySelector(`.${section}`).classList.add('active');
+        }
+
+        function showStudents() {
+            showSection('students');
+            document.querySelector('.students p').innerHTML = "Loading student data...";
+            setTimeout(() => {
+                document.querySelector('.students p').innerHTML = "Here are the latest student leave details.";
+            }, 1500);
+        }
+
+        function showFaculty() {
+            showSection('faculty');
+            alert("Faculty data will be available soon!");
+        }
+
+        function showCourses() {
+            showSection('courses');
+        }
+
+        function loadMoreCourses() {
+            let ul = document.getElementById("ug-courses");
+            let newCourses = ["B.Sc., Computer Science", "B.Sc., Data Science", "B.Com., Computer Applications"];
+            newCourses.forEach(course => {
+                let li = document.createElement("li");
+                li.textContent = course;
+                ul.appendChild(li);
+            });
+        }
+        
+                function logoutUser() {
+                    window.location.href = "index.php"; // Redirect to logout page
+                }
+           
+        function showReports() {
+            showSection('reports');
+            alert("New report has been generated!");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSection('dashboard');
+        });
+    </script>
+
+    <style>
+        /* Active section */
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #bcbfa0;
+            color: rgb(244, 17, 9);
+            position: fixed;
+            height: 100%;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            font-size: 50px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar button {
+            width: 100%;
+            padding: 10px;
+            background: #444444;
+            color: rgb(30, 174, 184);
+            border: none;
+            text-align: left;
+            cursor: pointer;
+        }
+        .sidebar button:hover {
+            background: #555;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgb(213, 200, 213);
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar a {
+    color: white; /* Ensures link color matches other buttons */
+    text-decoration: none; /* Removes underline */
+    font-size: 16px; /* Adjust font size */
+    font-weight: normal; /* Normal weight */
+}
+
+.sidebar a:hover {
+    text-decoration: underline; /* Optional hover effect */
+}
+
+/* .sidebar {
+    width: 250px;
+    background: url('clg.jpeg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: fixed;
+    height: 100%;
+    padding: 20px;
+} */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background: url('clg.jpeg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+
+    </style>
+</body>
+</html>

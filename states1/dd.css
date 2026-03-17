@@ -1,0 +1,142 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling with Image */
+body {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('clg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(184, 187, 105, 0.9);  /* Updated green shade */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;  /* Changed to white for better contrast */
+    margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    color: #110303;  /* Changed label color to white */
+}
+
+/* Input Fields */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Focus Effect */
+input:focus, textarea:focus, select:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 6px rgba(106, 17, 203, 0.5);
+}
+
+/* Textarea Styling */
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* Status Dropdown */
+select {
+    cursor: pointer;
+}
+
+/* Submit Button */
+button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;  /* Changed text color to white */
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover with Glow Effect */
+button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    box-shadow: 0 4px 12px rgba(106, 17, 203, 0.6);
+}
+
+/* Button Animated Shine Effect */
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-30deg);
+    transition: 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}

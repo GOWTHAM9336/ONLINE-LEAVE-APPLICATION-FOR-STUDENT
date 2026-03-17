@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+</head>
+<body background="bg.jfif" >
+    <style>
+        body{
+            background-repeat: no-repeat;
+            color: black;
+             background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+         .p1{
+            padding-top: 50px;
+            color: red;
+            padding-right: 200px;
+
+        }
+        .p2{
+            color: red;
+        }
+        .p3{
+            color:red;
+        }
+        div{
+            display: flex;
+            background-color: yellow;
+        }
+        .h33{
+    
+            padding-left: 20px;
+
+        }
+        .ee{
+           background-color: yellow;
+
+        }
+
+    </style>
+    <center>
+    <h1 style="color: rgb(67, 0, 83);"><u>ABOUT US</u></h1>
+    </center>
+    <a href="index1.php"><h3>GO TO HOME</h3></a>
+      <div class="ee">
+      <h2 class="p1"><u>About the college</u></h2>
+    <h3 class="h22" >Welcome to K.M.G. College of Arts and Science (Autonomous)<br>
+
+            KOUSALYA AMMAL GOVINDARAJAN EDUCATIONAL AND CHARITABLE TRUST,Gudiyattam was promoted<br> by Sri.K.M.Govindarajan as Founder / Chairman / Managing Trustee in the year 1999<br> for the uplift of Collegiate Education in the fields of Arts, Science, Technology, Culture and Sports both at U.G and P.G.<br>
+            
+            The Management with its Vision and Mission will be a role model to other autonomous institutions.<br>
+            
+            The day is not far off before this college attains the status of ‘Potential for Excellence’.<br> - The Principal.</h3></option>  
+       </div>
+       <hr>
+        <div >
+       <h2 class="p2"><u>Quality Policy</u></h2>
+       <h3 class="h33">KMG Students Achieve the Best Learning Results<br>
+
+        And<br>
+        
+        Personal Growth with Modern Educations that equipped them<br>
+        
+        For<br>
+        
+        Working life and a Changing Societyto Become Deserving Citizen</h3>
+       
+        <h2 class="p3"><u>Objectives</u></h2>
+        <ul>
+            <li>K-Knowledge to Obtain</li>
+
+              <li> M-Motive to Serve</li>
+                
+               <li> G-Goal to Reach</li>
+        </ul>
+    </div>
+    <marquee class="m1"> <h1 style="color: red;">100% Placement</h1></marquee>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    background: url('image/clg.jpeg') no-repeat center center/cover;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Full-screen container */
+.container {
+    width: 100%;
+    min-height: 100vh; /* Ensures full screen coverage */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(10, 43, 76, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+/* Main Content */
+.bg {
+    flex-grow: 1; /* Makes the content take the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Heading */
+.main {
+    text-align: center;
+    
+}
+
+.main h1 {
+    font-size: 2rem;
+    padding: 25px;
+    margin-top: 0%;
+    color: rgb(207, 0, 0);
+    background: rgba(119, 213, 24, 0.865);
+    border-radius: 5px;
+}
+
+/* Image Gallery */
+.imgs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.imgs img {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+/* Marquee Text */
+marquee {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.marque {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    height: 30px;
+    position: absolute;
+    bottom: 1px;
+}

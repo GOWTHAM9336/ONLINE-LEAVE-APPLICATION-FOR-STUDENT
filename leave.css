@@ -1,0 +1,117 @@
+/* Apply a background image to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background: url('clg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the form container */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated title */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff4b2b;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    
+    /* Apply animations */
+    animation: neonGlow 2s infinite alternate, bounceText 3s ease-in-out infinite;
+}
+
+
+
+/* Bounce Animation */
+@keyframes bounceText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+
+
+
+
+/* Style labels */
+label {
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Glowing input fields */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Input focus effect */
+input:focus, select:focus, textarea:focus {
+    border-color: #ff416c;
+    box-shadow: 0px 0px 8px rgba(255, 65, 108, 0.8);
+    outline: none;
+}
+
+/* Animated and attractive submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, background 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.4);
+}
+
+/* Button click effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 10px rgba(255, 75, 43, 0.6);
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+td {
+    padding: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
