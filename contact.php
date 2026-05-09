@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <title>contact</title>
 </head>
 <body>
-    <style>
+    <style> 
         body{
             background-color: black;
             color: antiquewhite;
